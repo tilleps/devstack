@@ -1,0 +1,22 @@
+{
+  "name": "devstack",
+  "version": "0.1.0",
+  "description": "Collection of scripts and functions",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tilleps/devstack.git"
+  },
+  "author": "Eugene Song <tilleps@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tilleps/devstack/issues"
+  },
+  "homepage": "https://github.com/tilleps/devstack#readme"
+}
