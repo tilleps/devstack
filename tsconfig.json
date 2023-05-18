@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "es2022",
+    "moduleResolution": "Node",
+    "target": "es6",
+    "checkJs": true,
+    "noEmit": true,
+    "strict": true
+  }
+}
