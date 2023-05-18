@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/tilleps/devstack/issues"
   },
-  "homepage": "https://github.com/tilleps/devstack#readme"
+  "homepage": "https://github.com/tilleps/devstack#readme",
+  "devDependencies": {
+    "tap": "^16.3.4"
+  }
 }
