@@ -2,7 +2,16 @@
   "name": "devstack",
   "version": "0.1.0",
   "description": "Collection of scripts and functions",
-  "main": "index.js",
+  "exports": {
+    ".": {
+      "import": "index.mjs",
+      "require": ""
+    },
+    "./*": {
+      "import": "./lib/*.mjs",
+      "require": ""
+    }
+  },
   "directories": {
     "lib": "lib"
   },
