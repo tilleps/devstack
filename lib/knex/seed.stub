@@ -1,0 +1,8 @@
+import { runQueries } from "devstack/knex/migration";
+
+/**
+ * Seed
+ */
+export const seed = runQueries(import.meta.url, [
+  // "sql-file-name-without-extension"
+]);

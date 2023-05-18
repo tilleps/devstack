@@ -1,0 +1,19 @@
+import { runQueries } from "devstack/knex/migration";
+
+/**
+ * Migration Up
+ */
+export const up = runQueries(import.meta.url, 
+  [
+    // "sql-file-name-without-extension"
+  ]
+);
+
+/**
+ * Migration Down
+ */
+export const down = runQueries(import.meta.url, 
+  [
+    // "sql-file-name-without-extension"
+  ]
+);
