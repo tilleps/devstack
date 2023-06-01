@@ -4,12 +4,16 @@
   "description": "Collection of scripts and functions",
   "exports": {
     ".": {
+      "types": "./lib/index.d.ts",
+      "require": "./dist/index.js",
       "import": "./lib/index.mjs",
-      "require": ""
+      "default": "./lib/index.mjs"
     },
     "./*": {
+      "types": "./lib/*.d.ts",
+      "require": "./dist/*.js",
       "import": "./lib/*.mjs",
-      "require": ""
+      "default": "./lib/*.mjs"
     }
   },
   "types": "./lib/index.d.ts",
