@@ -21,7 +21,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write lib/ .eslintrc.cjs .prettierrc.json index.d.ts"
   },
   "repository": {
     "type": "git",
@@ -53,6 +54,7 @@
     "express-async-errors": "^3.1.1"
   },
   "devDependencies": {
+    "prettier": "^2.8.8",
     "tap": "^16.3.4"
   }
 }

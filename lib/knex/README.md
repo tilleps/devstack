@@ -1,6 +1,5 @@
 # Knex
 
-
 ## Stubs
 
 Example configuration
