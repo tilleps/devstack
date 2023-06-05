@@ -4,7 +4,7 @@
   "description": "Collection of scripts and functions",
   "exports": {
     ".": {
-      "types": "./lib/index.d.ts",
+      "types": "./index.d.ts",
       "require": "./dist/index.js",
       "import": "./lib/index.mjs",
       "default": "./lib/index.mjs"
@@ -16,7 +16,7 @@
       "default": "./lib/*.mjs"
     }
   },
-  "types": "./lib/index.d.ts",
+  "types": "./index.d.ts",
   "directories": {
     "lib": "lib"
   },
@@ -33,6 +33,25 @@
     "url": "https://github.com/tilleps/devstack/issues"
   },
   "homepage": "https://github.com/tilleps/devstack#readme",
+  "peerDependencies": {
+    "ejs": ">= 3.0.0",
+    "express": ">= 4.0.0",
+    "pino": ">= 8.0.0"
+  },
+  "peerDependenciesMeta": {
+    "ejs": {
+      "optional": true
+    },
+    "express": {
+      "optional": true
+    },
+    "pino": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "express-async-errors": "^3.1.1"
+  },
   "devDependencies": {
     "tap": "^16.3.4"
   }
