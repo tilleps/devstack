@@ -37,6 +37,7 @@
   "peerDependencies": {
     "ejs": ">= 3.0.0",
     "express": ">= 4.0.0",
+    "knex": "^2.4.2",
     "pino": ">= 8.0.0"
   },
   "peerDependenciesMeta": {
@@ -44,6 +45,9 @@
       "optional": true
     },
     "express": {
+      "optional": true
+    },
+    "knex": {
       "optional": true
     },
     "pino": {
@@ -54,6 +58,7 @@
     "express-async-errors": "^3.1.1"
   },
   "devDependencies": {
+    "mysql2": "^3.3.5",
     "prettier": "^2.8.8",
     "tap": "^16.3.4"
   }
