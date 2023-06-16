@@ -1,0 +1,56 @@
+#!/usr/bin/env sh
+#
+# Generate Signing Keys and Certs
+#
+usage() { echo "Usage: $0 [-s <2048|3072>]" 1>&2; exit 1; }
+
+while getopts ":s:p:" o; do
+  case "${o}" in
+  s)
+    s=${OPTARG}
+    ((s == 2048 || s == 3072)) || usage
+    ;;
+  *)
+    usage
+    ;;
+  esac
+done
+shift $((OPTIND-1))
+
+#if [ -z "${s}" ] || [ -z "${p}" ]; then
+#    usage
+#fi
+
+SIZE=${s:=2048}
+
+echo ${SIZE}
+
+# Generate private key
+openssl genrsa -out ${SIZE}.key ${SIZE}
+
+# Generate public key
+openssl rsa -in ${SIZE}.key -outform PEM -pubout -out ${SIZE}.pub
+
+# Generate CSR
+openssl req -new -key ${SIZE}.key -out ${SIZE}.csr
+
+#Verify CSR
+openssl req -text -in ${SIZE}.csr -noout -verify
+
+# SSL Certificate
+openssl x509 -req -days 365 -in ${SIZE}.csr -signkey ${SIZE}.key -out ${SIZE}.crt
+
+# Thumbprint
+x5t=$(openssl x509 -in ${SIZE}.crt -outform DER | openssl dgst -sha1 -binary | base64 | tr '/+' '_-' | tr -d '=')
+
+
+mv ${SIZE}.crt ${x5t}.crt
+mv ${SIZE}.csr ${x5t}.csr
+mv ${SIZE}.key ${x5t}.key
+mv ${SIZE}.pub ${x5t}.pub
+
+echo ${x5t}
+
+
+
+
