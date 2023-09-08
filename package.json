@@ -38,6 +38,7 @@
     "ejs": ">= 3.0.0",
     "express": ">= 4.0.0",
     "knex": "^2.4.2",
+    "passport": "^0.6.0",
     "pino": ">= 8.0.0",
     "validate.js": "^0.13.1"
   },
@@ -49,6 +50,9 @@
       "optional": true
     },
     "knex": {
+      "optional": true
+    },
+    "passport": {
       "optional": true
     },
     "pino": {
