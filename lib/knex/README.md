@@ -5,7 +5,7 @@
 Example configuration
 
 ```js
-// ./config/dbs/mysql/example.mjs
+// ./config/db/mysql/example.mjs
 /**
  * @type { import("knex").Knex.Config }
  */

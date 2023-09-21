@@ -1,5 +1,8 @@
 # devstack
 
+Author: Eugene Song <tilleps@gmail.com>
+
+Personal collection of functions and scripts used in various projects.  Use at your own risk
 
 ## Known issues
 
