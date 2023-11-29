@@ -131,3 +131,6 @@ dist
 
 # Temp folder
 tmp
+
+# Node-Tap
+.tap
