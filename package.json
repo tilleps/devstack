@@ -22,7 +22,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write lib/ .eslintrc.cjs .prettierrc.json index.d.ts"
+    "format": "prettier --write lib/ .eslintrc.cjs .prettierrc.json index.d.ts",
+    "lint": "eslint --ext .js,.cjs,.mjs -c ./.eslintrc.cjs lib .eslintrc.cjs"
   },
   "repository": {
     "type": "git",
@@ -63,6 +64,7 @@
     "express-async-errors": "^3.1.1"
   },
   "devDependencies": {
+    "eslint": "^8.56.0",
     "mysql2": "^3.3.5",
     "prettier": "^2.8.8",
     "tap": "^18.7.0"
