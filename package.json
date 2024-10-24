@@ -22,8 +22,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write lib/ .eslintrc.cjs .prettierrc.json index.d.ts",
-    "lint": "eslint --ext .js,.cjs,.mjs -c ./.eslintrc.cjs lib .eslintrc.cjs"
+    "format": "prettier --write lib/ .prettierrc.json index.d.ts",
+    "lint": "eslint -c ./eslint.config.mjs ./lib"
   },
   "repository": {
     "type": "git",
@@ -39,8 +39,8 @@
     "ejs": ">= 3.0.0",
     "express": ">= 4.0.0",
     "knex": ">= 3.0.0",
-    "mysql2": "^3.11.0",
-    "passport": "^0.7.0",
+    "mysql2": ">=3.11.0",
+    "passport": ">=0.7.0",
     "pino": ">= 8.0.0",
     "validate.js": "^0.13.1"
   },
@@ -70,6 +70,8 @@
   },
   "devDependencies": {
     "eslint": "^9.8.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.11.0",
     "prettier": "^2.8.8",
     "tap": "^21.0.0"
   }
